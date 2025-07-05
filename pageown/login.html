@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Page</title>
+</head>
+<body>
+  <center>
+    <div>
+      <h2>Login here</h2>
+
+      <label for="username">Username</label><br>
+      <input type="text" name="user" id="uname" placeholder="Email or Phone"><br><br>
+      
+      <label for="password">Password</label><br>
+      <input type="password" name="pass" id="pwd" placeholder="Password"><br><br>
+      
+      <button onclick="getDetails()">Log in</button><br><br>
+
+      <!-- Google and Facebook buttons -->
+      <div>
+        <button><a href="https://www.google.com" target="_blank" style="text-decoration: none;">Google</a></button>
+        <button><a href="https://www.facebook.com" target="_blank" style="text-decoration: none;">Facebook</a></button>
+      </div>
+
+      <!-- Register page link -->
+      <p>Don't have an account?
+        <a href="register.html">Register</a>
+      </p>
+    </div>
+  </center>
+
+  <!-- JavaScript to show entered details -->
+  <script>
+    function getDetails() {
+      const username = document.getElementById("uname").value;
+      const password = document.getElementById("pwd").value;
+
+      if (username && password) {
+        alert("Login Details:\nUsername: " + username + "\nPassword: " + password);
+      } else {
+        alert("Please fill in both fields.");
+      }
+    }
+  </script>
+</body>
+</html>
